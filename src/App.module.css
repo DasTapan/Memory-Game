@@ -1,0 +1,45 @@
+/**
+ * Add border box sizing in all browsers (opinionated).
+ */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+ * Use the default cursor in all browsers (opinionated).
+ */
+
+html {
+  cursor: default;
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Override chrome default border style on elements */
+*,
+*:focus,
+*:hover {
+  outline: none;
+}
+
+.App {
+  height: 100vh;
+  background-color: lightsteelblue;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
