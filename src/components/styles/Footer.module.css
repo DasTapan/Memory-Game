@@ -5,4 +5,24 @@
   width: 100vw;
   position: fixed;
   bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.github {
+  height: 30px;
+  width: 30px;
+  background-image: url("../assets/icons/github-icon.png");
+  background-size: 100% 100%;
+}
+
+.name {
+  font-size: 20px;
 }
