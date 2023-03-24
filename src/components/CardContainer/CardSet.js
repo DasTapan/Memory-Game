@@ -37,6 +37,30 @@ function Name({ localClass, value }) {
   return <span className={localClass}>{value}</span>;
 }
 
+const people = [
+  { id: 1, name: "Abigail", imgUrl: Abigail },
+  { id: 2, name: "Arthur", imgUrl: Arthur },
+  { id: 3, name: "Bill", imgUrl: Bill },
+  { id: 4, name: "Charles", imgUrl: Charles },
+  { id: 5, name: "Dutch", imgUrl: Dutch },
+  { id: 6, name: "Herr Strauss", imgUrl: HerrStrauss },
+  { id: 7, name: "Hosea", imgUrl: Hosea },
+  { id: 8, name: "Jack", imgUrl: Jack },
+  { id: 9, name: "Javier", imgUrl: Javier },
+  { id: 10, name: "John", imgUrl: John },
+  { id: 11, name: "Karen", imgUrl: Karen },
+  { id: 12, name: "Marry Beth", imgUrl: MaryBeth },
+  { id: 13, name: "Micah Bell", imgUrl: MicahBell },
+  { id: 14, name: "Molly", imgUrl: Molly },
+  { id: 15, name: "Mr Pearson", imgUrl: MrPearson },
+  { id: 16, name: "Mr Trelawney", imgUrl: MrTrelawney },
+  { id: 17, name: "Reverend Swanson", imgUrl: Reverend },
+  { id: 18, name: "Sean", imgUrl: Sean },
+  { id: 19, name: "Susan", imgUrl: Susan },
+  { id: 20, name: "Tilly", imgUrl: Tilly },
+  { id: 21, name: "Uncle", imgUrl: Uncle },
+];
+
 const CardSet = [
   <Card id={1}>
     <Pic localClass={picStyles.pic} person={Abigail} />
@@ -125,3 +149,4 @@ const CardSet = [
 ];
 
 export default CardSet;
+export { people };
