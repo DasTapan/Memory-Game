@@ -57,7 +57,11 @@ function App() {
   return (
     <div className={styles.App}>
       <Header score={score} bestScore={bestScore} />
-      <Container people={DATA} />
+      <Container
+        people={DATA}
+        handleScore={setScore}
+        handleBestScore={setBestScore}
+      />
       <Footer />
     </div>
   );
