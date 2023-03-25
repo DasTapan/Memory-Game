@@ -17,14 +17,15 @@ function Name({ localClass, name }) {
 }
 
 function Container({ people }) {
-  const cardsCollage = people.map((person) => (
+  const cards = people.map((person) => (
     <Card key={person.id}>
       <Pic localClass={picStyles.pic} imgSrc={person.imgUrl} />
       <Name localClass={nameStyles.name} name={person.name} />
     </Card>
   ));
 
-  return <div className={styles.container}>{cardsCollage}</div>;
+  const displayCards = cards.slice(0, 15);
+  return <div className={styles.container}>{displayCards}</div>;
 }
 
 export default Container;

@@ -3,12 +3,12 @@ import Score from "./Score";
 import styles from "../styles/Header.module.css";
 import "../styles/Header.scss";
 
-function Header() {
+function Header({ score, bestScore }) {
   return (
     <div className={styles.header}>
       <span className="heading">Wild West Memory Game</span>
-      <BestScore count={0} />
-      <Score count={0} />
+      <BestScore count={score} />
+      <Score count={bestScore} />
     </div>
   );
 }
