@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Card.module.css";
 
-function Card({ children }) {
+function Card({ children, handleScore, handleBestScore }) {
   const [clicked, setClicked] = useState(0);
 
-  function handleClick() {
-    setClicked(clicked + 1);
-    console.log(`clicked:${clicked}`);
-  }
+  useEffect(() => {
+    handleScore(clicked);
+    handleBestScore(clicked);
+  }, [clicked, handleScore, handleBestScore]);
 
   return (
-    <div className={styles.card} onClick={handleClick}>
+    <div className={styles.card} onClick={() => setClicked(clicked + 1)}>
       {children}
     </div>
   );
