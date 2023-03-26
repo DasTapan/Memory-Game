@@ -1,90 +1,24 @@
-import styles from "../styles/Container.module.css";
+import Card from "./Card";
+import "../styles/Container.scss";
+import { shuffle } from "lodash";
 
-function Container() {
+function Container({ info }) {
+  const people = [...info];
+  // console.log(people);
+  const displayList = shuffle(people).slice(0, 15);
+  // console.log(displayList);
   return (
-    <div className={styles.container}>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
-      <div className={styles.card}>
-        <div className={styles.pic}></div>
-        <span className={styles.name}></span>
-      </div>
+    <div className="container">
+      {displayList.map((item) => (
+        <Card
+          key={item.id}
+          id={item.id}
+          imgSrc={item.imgUrl}
+          name={item.name}
+        />
+      ))}
     </div>
   );
-}
-
-function Name({ localClass, name }) {
-  return <span className={localClass}>{name}</span>;
-}
-
-function Container({ people, handleScore, handleBestScore }) {
-  const cards = people.map((person) => (
-    <Card
-      key={person.id}
-      handleScore={handleScore}
-      handleBestScore={handleBestScore}
-    >
-      <Pic localClass={picStyles.pic} imgSrc={person.imgUrl} />
-      <Name localClass={nameStyles.name} name={person.name} />
-    </Card>
-  ));
-
-  const displayCards = cards.slice(0, 15);
-  return <div className={styles.container}>{displayCards}</div>;
 }
 
 export default Container;

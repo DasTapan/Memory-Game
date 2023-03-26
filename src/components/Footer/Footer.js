@@ -1,7 +1,14 @@
-import styles from "../styles/Footer.module.css";
+import "../styles/Footer.scss";
 
 function Footer() {
-  return <div className={styles.footer}></div>;
+  return (
+    <div className="footer">
+      <div className="wrapper">
+        <div className="github"></div>
+        <span className="name">DasTapan</span>
+      </div>
+    </div>
+  );
 }
 
 export default Footer;
