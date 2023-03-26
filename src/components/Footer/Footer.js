@@ -1,11 +1,11 @@
-import styles from "../styles/Footer.module.css";
+import "../styles/Footer.scss";
 
 function Footer() {
   return (
-    <div className={styles.footer}>
-      <div className={styles.wrapper}>
-        <div className={styles.github}></div>
-        <span className={styles.name}>DasTapan</span>
+    <div className="footer">
+      <div className="wrapper">
+        <div className="github"></div>
+        <span className="name">DasTapan</span>
       </div>
     </div>
   );
