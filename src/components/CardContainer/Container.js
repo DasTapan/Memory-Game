@@ -1,20 +1,27 @@
 import Card from "./Card";
 import "../styles/Container.scss";
-import { shuffle } from "lodash";
+import collect from "collect.js";
+import { useState } from "react";
 
 function Container({ info }) {
+  // const[clicked,setClicked] = useState([])
+
+  function handleOnClick(person) {
+    console.log(`${person.name} -${person.id} has been clicked`);
+  }
+
   const people = [...info];
-  // console.log(people);
-  const displayList = shuffle(people).slice(0, 15);
-  // console.log(displayList);
+  const collection = collect(people);
+  const fifteenRandom = collection.random(15).items;
   return (
     <div className="container">
-      {displayList.map((item) => (
+      {fifteenRandom.map((item) => (
         <Card
           key={item.id}
           id={item.id}
           imgSrc={item.imgUrl}
           name={item.name}
+          handleOnClick={handleOnClick}
         />
       ))}
     </div>
