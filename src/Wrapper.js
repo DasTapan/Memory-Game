@@ -23,7 +23,7 @@ import Sean from "./components/assets/pics/Sean.jpeg";
 import Susan from "./components/assets/pics/Susan.jpeg";
 import Tilly from "./components/assets/pics/Tilly.jpeg";
 import Uncle from "./components/assets/pics/Uncle.jpeg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const DATA = [
   { id: 1, name: "Abigail", imgUrl: Abigail },
@@ -53,6 +53,13 @@ export default function Wrapper() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [isRepeated, setIsRepeated] = useState(false);
+
+  useEffect(() => {
+    const savedJson = localStorage.getItem("memoryGameHighScore");
+    const parsedJSON = JSON.parse(savedJson);
+
+    if (parsedJSON !== null) setBestScore(parsedJSON);
+  }, []);
 
   if (isRepeated) console.log("A repeat happened");
 
