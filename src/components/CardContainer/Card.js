@@ -1,10 +1,6 @@
 function Card({ id, imgSrc, name, handleOnClick }) {
-  function handleClick() {
-    handleOnClick({ id, name });
-  }
-
   return (
-    <div className="card" onClick={handleClick}>
+    <div className="card" onClick={() => handleOnClick({ id, name })}>
       <img src={imgSrc} alt={name} />
       <span>{name}</span>
     </div>
