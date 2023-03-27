@@ -23,6 +23,7 @@ import Sean from "./components/assets/pics/Sean.jpeg";
 import Susan from "./components/assets/pics/Susan.jpeg";
 import Tilly from "./components/assets/pics/Tilly.jpeg";
 import Uncle from "./components/assets/pics/Uncle.jpeg";
+import { useState } from "react";
 
 const DATA = [
   { id: 1, name: "Abigail", imgUrl: Abigail },
@@ -49,10 +50,21 @@ const DATA = [
 ];
 
 export default function Wrapper() {
+  const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
+  const [isRepeated, setIsRepeated] = useState(false);
+
+  if (isRepeated) console.log("A repeat happened");
+
   return (
     <>
-      <Header />
-      <Container info={DATA} />
+      <Header score={score} bestScore={bestScore} />
+      <Container
+        info={DATA}
+        updateScore={setScore}
+        updateBestScore={setBestScore}
+        informRepetition={setIsRepeated}
+      />
       <Footer />
     </>
   );
