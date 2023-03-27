@@ -6,8 +6,8 @@ function Header({ score, bestScore }) {
   return (
     <div className="header">
       <span className="heading">Wild West Memory Game</span>
-      <BestScore count={score} />
-      <Score count={bestScore} />
+      <BestScore count={bestScore} />
+      <Score count={score} />
     </div>
   );
 }

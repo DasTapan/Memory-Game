@@ -51,17 +51,27 @@ const DATA = [
 
 export default function Wrapper() {
   const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
-  const [isRepeated, setIsRepeated] = useState(false);
-
-  useEffect(() => {
+  const [bestScore, setBestScore] = useState(() => {
     const savedJson = localStorage.getItem("memoryGameHighScore");
     const parsedJSON = JSON.parse(savedJson);
 
-    if (parsedJSON !== null) setBestScore(parsedJSON);
-  }, []);
+    return parsedJSON || 0;
+  });
+  const [isRepeated, setIsRepeated] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("memoryGameHighScore", bestScore);
+  }, [bestScore]);
 
   if (isRepeated) console.log("A repeat happened");
+
+  function compareScore(currentScore) {
+    if (currentScore <= bestScore) setScore(currentScore);
+    else {
+      setBestScore(currentScore);
+      setScore(currentScore);
+    }
+  }
 
   return (
     <>
@@ -69,8 +79,7 @@ export default function Wrapper() {
       {!isRepeated ? (
         <Container
           info={DATA}
-          updateScore={setScore}
-          updateBestScore={setBestScore}
+          compareScore={compareScore}
           informRepetition={setIsRepeated}
         />
       ) : (

@@ -3,7 +3,7 @@ import "../styles/Container.scss";
 import collect from "collect.js";
 import { useCallback, useEffect, useState } from "react";
 
-function Container({ info, updateScore, updateBestScore, informRepetition }) {
+function Container({ info, compareScore, informRepetition }) {
   const [clicked, setClicked] = useState([]);
 
   const people = [...info];
@@ -19,31 +19,19 @@ function Container({ info, updateScore, updateBestScore, informRepetition }) {
 
   const handleScore = useCallback(
     (val) => {
-      updateScore(val);
+      compareScore(val);
     },
-    [updateScore]
-  );
-
-  const handleBestScore = useCallback(
-    (val) => {
-      updateBestScore(val);
-    },
-    [updateBestScore]
+    [compareScore]
   );
 
   useEffect(() => {
     const unique = collect(clicked).unique().all();
     if (clicked.length > unique.length) {
-      console.log("NOT OK");
       handleRepetition(true);
-    } else {
-      handleScore(unique.length);
-      handleBestScore(unique.length);
-    }
-  }, [clicked, handleRepetition, handleScore, handleBestScore]);
+    } else handleScore(unique.length);
+  }, [clicked, handleRepetition, handleScore]);
 
   function handleOnClick(person) {
-    // console.log(`${person.name} -${person.id} has been clicked`);
     setClicked(clicked.concat(+person.id));
   }
 
