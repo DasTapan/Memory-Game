@@ -59,12 +59,16 @@ export default function Wrapper() {
   return (
     <>
       <Header score={score} bestScore={bestScore} />
-      <Container
-        info={DATA}
-        updateScore={setScore}
-        updateBestScore={setBestScore}
-        informRepetition={setIsRepeated}
-      />
+      {!isRepeated ? (
+        <Container
+          info={DATA}
+          updateScore={setScore}
+          updateBestScore={setBestScore}
+          informRepetition={setIsRepeated}
+        />
+      ) : (
+        <div>Game over</div>
+      )}
       <Footer />
     </>
   );
