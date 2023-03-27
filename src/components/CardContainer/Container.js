@@ -17,13 +17,30 @@ function Container({ info, updateScore, updateBestScore, informRepetition }) {
     [informRepetition]
   );
 
+  const handleScore = useCallback(
+    (val) => {
+      updateScore(val);
+    },
+    [updateScore]
+  );
+
+  const handleBestScore = useCallback(
+    (val) => {
+      updateBestScore(val);
+    },
+    [updateBestScore]
+  );
+
   useEffect(() => {
     const unique = collect(clicked).unique().all();
     if (clicked.length > unique.length) {
       console.log("NOT OK");
       handleRepetition(true);
+    } else {
+      handleScore(unique.length);
+      handleBestScore(unique.length);
     }
-  }, [clicked, handleRepetition]);
+  }, [clicked, handleRepetition, handleScore, handleBestScore]);
 
   function handleOnClick(person) {
     // console.log(`${person.name} -${person.id} has been clicked`);
