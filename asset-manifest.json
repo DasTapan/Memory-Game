@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/Memory-Game/static/css/main.8b6c5c03.css",
+    "main.js": "/Memory-Game/static/js/main.cac29d31.js",
+    "static/media/Abigail.jpeg": "/Memory-Game/static/media/Abigail.340ecb7d66cef4866fab.jpeg",
+    "static/media/Mr-Pearson.jpeg": "/Memory-Game/static/media/Mr-Pearson.df6f85a41fbdd8e14079.jpeg",
+    "static/media/John.jpeg": "/Memory-Game/static/media/John.f74bc63be745804b9285.jpeg",
+    "static/media/Bill.jpeg": "/Memory-Game/static/media/Bill.efde214e8dcf8c6d374b.jpeg",
+    "static/media/Charles.jpeg": "/Memory-Game/static/media/Charles.6f44a476bbce0697f7b2.jpeg",
+    "static/media/box-art.jpeg": "/Memory-Game/static/media/box-art.6de93fe28fc1d5d7dcbb.jpeg",
+    "static/media/Molly.jpeg": "/Memory-Game/static/media/Molly.b8b821813dd307aa1af2.jpeg",
+    "static/media/Susan.jpeg": "/Memory-Game/static/media/Susan.cbaab6a831b0c88baab4.jpeg",
+    "static/media/Dutch.jpeg": "/Memory-Game/static/media/Dutch.151cb8bd9194dcaf338f.jpeg",
+    "static/media/Micah-Bell.jpeg": "/Memory-Game/static/media/Micah-Bell.7b2ddb064036cf19ceef.jpeg",
+    "static/media/MarckScript-Regular.ttf": "/Memory-Game/static/media/MarckScript-Regular.5b6142752f3269576cc7.ttf",
+    "static/media/Herr-Strauss.jpeg": "/Memory-Game/static/media/Herr-Strauss.c1e68812f4ff7dc42234.jpeg",
+    "static/media/DancingScript-Bold.ttf": "/Memory-Game/static/media/DancingScript-Bold.72fc35f38c2864ca2cd5.ttf",
+    "static/media/Hosea.jpeg": "/Memory-Game/static/media/Hosea.688d434d296b99626a25.jpeg",
+    "static/media/Javier.jpeg": "/Memory-Game/static/media/Javier.9f1f8191fa1c443a4ecf.jpeg",
+    "static/media/Arthur.jpeg": "/Memory-Game/static/media/Arthur.5bb9bdcb478994494544.jpeg",
+    "static/media/Sean.jpeg": "/Memory-Game/static/media/Sean.842b82460d3bda750ee8.jpeg",
+    "static/media/Karen.jpeg": "/Memory-Game/static/media/Karen.63f799db3344b61466ec.jpeg",
+    "static/media/Reverend-Swanson.jpeg": "/Memory-Game/static/media/Reverend-Swanson.b868dd51227c87e2955c.jpeg",
+    "static/media/Mary-Beth.jpeg": "/Memory-Game/static/media/Mary-Beth.86c18b280a5a413f6b61.jpeg",
+    "static/media/Mr-Trelawney.jpeg": "/Memory-Game/static/media/Mr-Trelawney.0a8d62e61c34e0a2b504.jpeg",
+    "static/media/Uncle.jpeg": "/Memory-Game/static/media/Uncle.869d8d7358a98f0abfc9.jpeg",
+    "static/media/Tilly.jpeg": "/Memory-Game/static/media/Tilly.c99153790c350ffc6536.jpeg",
+    "static/media/Chinese-Rock.ttf": "/Memory-Game/static/media/Chinese-Rock.ba62fe2c7ccf21bf1072.ttf",
+    "static/media/Jack.jpeg": "/Memory-Game/static/media/Jack.dd268a411ada40382470.jpeg",
+    "index.html": "/Memory-Game/index.html",
+    "main.8b6c5c03.css.map": "/Memory-Game/static/css/main.8b6c5c03.css.map",
+    "main.cac29d31.js.map": "/Memory-Game/static/js/main.cac29d31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b6c5c03.css",
+    "static/js/main.cac29d31.js"
+  ]
+}
