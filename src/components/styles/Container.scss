@@ -2,13 +2,13 @@
   background-color: green;
   width: max(700px, 70%);
   padding: 5px;
-  gap: 5px;
+  gap: 6.5px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(170px, 1fr));
 
   .card {
-    background-color: blanchedalmond;
+    background-color: #ffdb89;
     display: flex;
     flex-direction: column;
     align-items: center;

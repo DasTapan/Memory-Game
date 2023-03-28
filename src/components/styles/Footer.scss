@@ -1,7 +1,13 @@
+@font-face {
+  font-family: Chinese-Rock;
+  src: url("../assets/fonts/Chinese-Rock.ttf");
+}
+
 .footer {
-  background-color: blue;
+  background-color: #fff6c3;
   height: 40px;
 
+  font-family: Chinese-Rock;
   width: 100vw;
   position: fixed;
   bottom: 0;
@@ -19,7 +25,6 @@
 .github {
   height: 30px;
   width: 30px;
-  background-image: url("../assets/icons/github-icon.png");
   background-size: 100% 100%;
 }
 

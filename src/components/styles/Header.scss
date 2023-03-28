@@ -1,6 +1,36 @@
+@font-face {
+  font-family: Chinese-Rock;
+  src: url("../assets/fonts/Chinese-Rock.ttf");
+}
+
+@font-face {
+  font-family: MarckScript;
+  src: url("../assets/fonts/MarckScript-Regular.ttf");
+}
+
+@font-face {
+  font-family: Dancing-Script;
+  src: url("../assets/fonts/Dancing_Scripts/DancingScript-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Dancing-Script;
+  src: url("../assets/fonts/Dancing_Scripts/DancingScript-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Dancing-Script;
+  src: url("../assets/fonts/Dancing_Scripts/DancingScript-Medium.ttf");
+  font-weight: 500;
+}
+
 .header {
   background-color: red;
   height: 55px;
+  font-family: Chinese-Rock;
+  color: white;
 
   width: 100vw;
   position: fixed;
@@ -8,14 +38,16 @@
 
   display: flex;
   align-items: center;
+  justify-content: space-around;
   padding: 10px 5px;
 
   .heading {
-    font-size: 30px;
+    font-size: 40px;
+    letter-spacing: 1.1px;
   }
 
   .score,
   .best-score {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
