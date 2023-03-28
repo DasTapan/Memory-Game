@@ -1,3 +1,26 @@
+@font-face {
+  font-family: MarckScript;
+  src: url("../assets/fonts/MarckScript-Regular.ttf");
+}
+
+@font-face {
+  font-family: Dancing-Script;
+  src: url("../assets/fonts/Dancing_Scripts/DancingScript-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Dancing-Script;
+  src: url("../assets/fonts/Dancing_Scripts/DancingScript-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Dancing-Script;
+  src: url("../assets/fonts/Dancing_Scripts/DancingScript-Medium.ttf");
+  font-weight: 500;
+}
+
 .container {
   background-color: green;
   width: max(700px, 70%);
@@ -22,10 +45,11 @@
       background-size: 100% 100%;
     }
 
-    .name {
-      height: 20px;
-      background-color: blue;
-      color: white;
+    span {
+      font-family: MarckScript;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      font-size: 18px;
     }
   }
 }
