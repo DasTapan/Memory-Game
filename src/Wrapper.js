@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import Container from "./components/CardContainer/Container";
 import Footer from "./components/Footer/Footer";
+import GameOver from "./GameOver";
 
 import Abigail from "./components/assets/pics/Abigail.jpeg";
 import Arthur from "./components/assets/pics/Arthur.jpeg";
@@ -63,8 +64,6 @@ export default function Wrapper() {
     localStorage.setItem("memoryGameHighScore", bestScore);
   }, [bestScore]);
 
-  if (isRepeated) console.log("A repeat happened");
-
   function compareScore(currentScore) {
     if (currentScore <= bestScore) setScore(currentScore);
     else {
@@ -83,7 +82,7 @@ export default function Wrapper() {
           informRepetition={setIsRepeated}
         />
       ) : (
-        <div>Game over</div>
+        <GameOver replay={setIsRepeated} />
       )}
       <Footer />
     </>

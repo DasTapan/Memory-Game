@@ -1,0 +1,46 @@
+@font-face {
+  font-family: MarckScript;
+  src: url("../assets/fonts/MarckScript-Regular.ttf");
+}
+
+@font-face {
+  font-family: DancingScript;
+  src: url("../assets/fonts/Dancing_Scripts/DancingScript-Bold.ttf");
+  font-weight: 700;
+}
+
+.game-over {
+  position: absolute;
+  top: 55px;
+  height: calc(100vh - (93px));
+  width: 100vw;
+  border: 2px solid green;
+
+  background-image: url("../assets/game-over-pics/box-art.jpeg");
+  background-size: 100% 100%;
+
+  .dialogue {
+    position: absolute;
+    top: 70px;
+    right: 200px;
+
+    font-family: DancingScript;
+    letter-spacing: 1.3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      color: whitesmoke;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    button {
+      padding: 5px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 1.35rem;
+    }
+  }
+}

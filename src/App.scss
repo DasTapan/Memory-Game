@@ -32,16 +32,18 @@ body {
   outline: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .App {
   height: 100vh;
   background-color: #850000;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
-  /* position: relative; */
-
   overflow: auto;
+  font-size: 16px;
 }

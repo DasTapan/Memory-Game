@@ -3,32 +3,20 @@
   src: url("../assets/fonts/MarckScript-Regular.ttf");
 }
 
-@font-face {
-  font-family: Dancing-Script;
-  src: url("../assets/fonts/Dancing_Scripts/DancingScript-Bold.ttf");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: Dancing-Script;
-  src: url("../assets/fonts/Dancing_Scripts/DancingScript-SemiBold.ttf");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: Dancing-Script;
-  src: url("../assets/fonts/Dancing_Scripts/DancingScript-Medium.ttf");
-  font-weight: 500;
-}
-
 .container {
   background-color: green;
   width: max(700px, 70%);
   padding: 5px;
+  margin-bottom: 20px;
+
   gap: 6.5px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(170px, 1fr));
+
+  .card:hover {
+    cursor: pointer;
+  }
 
   .card {
     background-color: #ffdb89;
