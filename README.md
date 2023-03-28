@@ -4,9 +4,9 @@ This is a functional component based application
 
 # How to Play:
 
-=> Click a character until you repeat
-=>Highest score is 21
-=>Cards change after each click
-=>Give it a try
+Click a character until you repeat someone. Try to achieve high score 21 and test
+your memory in this fun game. I hope you enjoy.
 
-# Live Link
+# Tools
+
+Saas was helpful to organize style sheets and reduce code repetition
